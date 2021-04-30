@@ -9,7 +9,9 @@
     build a mini project
 '''
     
-tasks = []
+tasks = [] #Holds all the tasks we add.(our Todo ist)
+
+#displays all the tasks in the list
 def allTasks():
     print("All upcoming tasks",end='\n')
     if len(tasks) == 0:
@@ -18,11 +20,12 @@ def allTasks():
     for task in tasks:
         print(tasks.index(task)+1,task,sep=".")
 
-
+#adds a task to the todo list
 def addTask(task):
     tasks.append(task)
     print('Task added successfully')
 
+#Displays upcoming 5 tasks
 def show5():
     if len(tasks)==0:
         print("No tasks currently")
@@ -36,12 +39,14 @@ def show5():
         for task in tasks:
             print(tasks.index(task)+1,task,sep=".")
 
+#Displays Upcoming task
 def show1():
     if len(tasks)==0:
         print('No upcoming tasks..(Use add options to add some)')
         return
     print("upcoming task: ",tasks[0],end='\n')
-    
+
+#clears the current task if its completed 
 def update():
     if len(tasks) == 0:
         print('You have no tasks in the list')
@@ -54,10 +59,13 @@ def update():
     else:
         print('\nComplete task to remove it from the list')
 
+#clears the tasks in the todo list
 def reset():
     tasks.clear()
     print('List is reset.')
 
+
+#Our menu for the application
 print('\"\n\nTodolist application\"s')
 print('--------------------------------')
 while True:
@@ -99,5 +107,5 @@ while True:
         print('                  Bye then, Have a good time!')
         break
 
-
+#END
 
