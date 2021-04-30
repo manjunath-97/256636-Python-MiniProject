@@ -15,7 +15,7 @@ tasks = [] #Holds all the tasks we add.(our Todo ist)
 def allTasks():
     print("All upcoming tasks",end='\n')
     if len(tasks) == 0:
-        print("No tasks in the list currenty...(Use add task option")
+        print("No tasks in the list currenty...(Use add task option)")
         return
     for task in tasks:
         print(tasks.index(task)+1,task,sep=".")
@@ -28,7 +28,7 @@ def addTask(task):
 #Displays upcoming 5 tasks
 def show5():
     if len(tasks)==0:
-        print("No tasks currently")
+        print("No tasks in the list")
     elif len(tasks)<5:
         print("Your tasks:")
         for task in tasks:
