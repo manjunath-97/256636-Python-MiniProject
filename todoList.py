@@ -28,7 +28,7 @@ def addTask(task):
 #Displays upcoming 5 tasks
 def show5():
     if len(tasks)==0:
-        print("No tasks in the list")
+        print("No  tasks in the list")
     elif len(tasks)<5:
         print("Your tasks:")
         for task in tasks:
